@@ -1,0 +1,104 @@
+<mxfile host="65bd71144e">
+    <diagram id="JzD8ezDj2iEckY4eZZto" name="Page-1">
+        <mxGraphModel dx="1386" dy="594" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="&lt;br&gt;&lt;b data-index-in-node=&quot;0&quot; data-path-to-node=&quot;5,0,0&quot;&gt;External Input:&lt;/b&gt; Camera counts eggs.&lt;br&gt;Lets imagine our Barn has installed Cameras to to count the eggs." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="40" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;b data-index-in-node=&quot;0&quot; data-path-to-node=&quot;14,0,0&quot;&gt;Data Entry:&lt;/b&gt; Daily entry populates the &lt;code data-index-in-node=&quot;38&quot; data-path-to-node=&quot;14,0,0&quot;&gt;Chicken Tracker&lt;/code&gt; (either manually or via API from the camera)." style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="640" y="120" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;b data-index-in-node=&quot;0&quot; data-path-to-node=&quot;5,1,0&quot;&gt;Staging Area:&lt;/b&gt; Data lands in a custom table (&lt;code data-index-in-node=&quot;44&quot; data-path-to-node=&quot;5,1,0&quot;&gt;Chicken Tracker&lt;/code&gt;)." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="130" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="endArrow=classic;html=1;exitX=0.474;exitY=1.1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="3">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="400" y="330" as="sourcePoint"/>
+                        <mxPoint x="376" y="130" as="targetPoint"/>
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="570" y="160" as="sourcePoint"/>
+                        <mxPoint x="640" y="190" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="570" y="150"/>
+                            <mxPoint x="620" y="150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="" style="edgeStyle=elbowEdgeStyle;elbow=vertical;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="220" y="155" as="sourcePoint"/>
+                        <mxPoint x="130" y="165" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="10" value="Fields are:&lt;div&gt;No.(Code20-PK)&lt;/div&gt;&lt;div&gt;Chicken Qty(Integer)&lt;/div&gt;&lt;div&gt;Eggs Qty(Integer)&lt;/div&gt;&lt;div&gt;Date(Date/Time)&lt;/div&gt;&lt;div&gt;UserID&lt;/div&gt;&lt;div&gt;Item No(Code-Tablerelation)&lt;/div&gt;&lt;div&gt;Location Code(Tablerelation)&lt;/div&gt;&lt;div&gt;Processed(Boolean)&lt;/div&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="170" width="170" height="170" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="190" as="sourcePoint"/>
+                        <mxPoint x="380" y="230" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="12" value="&lt;b data-index-in-node=&quot;0&quot; data-path-to-node=&quot;5,2,0&quot;&gt;Processing:&lt;/b&gt; Data is moved to standard journals (&lt;code data-index-in-node=&quot;48&quot; data-path-to-node=&quot;5,2,0&quot;&gt;Item Journal&lt;/code&gt;)." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="230" width="350" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="570" y="260" as="sourcePoint"/>
+                        <mxPoint x="650" y="290" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="650" y="270"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="15" value="&lt;b data-index-in-node=&quot;0&quot; data-path-to-node=&quot;5,3,0&quot;&gt;Posting:&lt;/b&gt; Positive Adjustment creates &lt;code data-index-in-node=&quot;37&quot; data-path-to-node=&quot;5,3,0&quot;&gt;Item Ledger Entries&lt;/code&gt; so the inventory can be sold." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="320" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="endArrow=classic;html=1;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="380" y="290" as="sourcePoint"/>
+                        <mxPoint x="380" y="320" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="380" y="280"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="17" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="13">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="580" y="380" as="sourcePoint"/>
+                        <mxPoint x="630" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="18" value="" style="endArrow=classic;html=1;" edge="1" parent="1" target="13">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="580" y="380" as="sourcePoint"/>
+                        <mxPoint x="630" y="330" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="&lt;p data-path-to-node=&quot;10,2,0&quot;&gt;Build an action directly on the Chicken Tracker page called &quot;Create Item Journal Lines&quot;.&lt;/p&gt;&lt;p data-path-to-node=&quot;10,2,0&quot;&gt;When the user clicks it, a processing Codeunit runs.&lt;/p&gt;&lt;p data-path-to-node=&quot;10,2,0&quot;&gt;It grabs all un-processed records for the selected date.&lt;/p&gt;&lt;p data-path-to-node=&quot;10,2,0&quot;&gt;It automatically inserts standard Item Journal Line records mapping your custom data to standard fields (e.g., Item No. = &#39;EGGS&#39;, Quantity = Tracker.Eggs Qty, Posting Date = Tracker.Date).&lt;/p&gt;&lt;p data-path-to-node=&quot;10,2,0&quot;&gt;This keeps standard BC objects clean and reduces the number of custom fields you need to maintain.&lt;/p&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="590" y="290" width="260" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;Summary of whole Solution&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;Data Entry: Daily entry populates the Chicken Tracker (either manually or via API from the camera)&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;Action: User clicks &quot;Create Journal Lines&quot; on the Tracker page.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;Codeunit Execution: AL code validates the un-processed entries, generates standard Item Journal Lines (Positive Adjustment), and leaves them ready for review.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;Posting: User reviews the Item Journal and clicks Post.&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;Event Subscriber (The Hook): An event subscriber listens for the successful posting of those specific journal lines and updates the original Chicken Tracker records to Processed = true.&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="220" y="410" width="360" height="240" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="edgeStyle=segmentEdgeStyle;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" edge="1" parent="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="580" y="130" as="sourcePoint"/>
+                        <mxPoint x="630" y="80" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="Extend Item card to display only Chicken Eggs item:&lt;div&gt;Boolean type.&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="20">
+                    <mxGeometry x="0.46" y="-3" relative="1" as="geometry">
+                        <mxPoint x="67" y="-47" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

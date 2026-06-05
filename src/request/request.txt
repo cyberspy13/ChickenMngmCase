@@ -1,0 +1,15 @@
+Scenario Overview: The Chicken Management Case
+Objective Develop a standard-compliant Business Central extension to manage chickens and eggs. This hands-on, fictional business case serves as a practical exercise to master BC extension development from design to deployment.
+
+The Business Need A modern chicken farm recently implemented Business Central for their accounting. They currently use manual Excel spreadsheets to track their chickens and egg production and need this process fully integrated into their new BC environment.
+
+Development Lifecycle
+To deliver this solution, you will follow a standard extension development workflow:
+
+Analysis & Data Modeling: Conduct a technical analysis of the client's requirements to design the entity-relationship (ER) diagram, defining the necessary tables, extensions, and fields.
+
+UI Design: Map out and analyze all the pages required for the user interface.
+
+Development & Testing: Build the extension and deploy it to a Business Central Development Sandbox for thorough testing and refinement.
+
+Production Deployment: Once validated in the sandbox, deploy the finalized app to the live Production environment.
