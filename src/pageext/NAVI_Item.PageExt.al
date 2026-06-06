@@ -8,6 +8,10 @@ pageextension 51000 NAVI_Item extends "Item Card"
             {
                 ApplicationArea = All;
             }
+            field("NAVI Item Location"; Rec."NAVI Item Location")
+            {
+                ApplicationArea = All;
+            }
         }
     }
 }

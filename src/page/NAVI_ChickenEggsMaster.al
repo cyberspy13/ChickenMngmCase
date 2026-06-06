@@ -27,7 +27,7 @@ page 51000 NAVI_ChickenEggs
                 field("User ID"; Rec."User ID")
                 {
                 }
-                field("Item No"; Rec."Item No")
+                field("Item No"; Rec."NAVI Item No")
                 {
                 }
                 field(Location; Rec.Location)
@@ -36,6 +36,23 @@ page 51000 NAVI_ChickenEggs
                 field(Processed; Rec.Processed)
                 {
                 }
+            }
+        }
+    }
+    actions
+    {
+        area(Processing)
+        {
+            action(CreateItemJournalLine)
+            {
+                Caption = 'Create Item Journal Line';
+                Image = New;
+                trigger OnAction()
+                var
+                    Lcdu_ChickenMngmCdu: Codeunit NAVI_ChickenMngmCdu;
+                begin
+                    Lcdu_ChickenMngmCdu.CreateChickenEggsRecordInItemJournal(Rec);
+                end;
             }
         }
     }

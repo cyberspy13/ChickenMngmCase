@@ -17,16 +17,16 @@ table 51000 NAVI_ChickenEggsMaster
         {
             Caption = 'Eggs Qty.';
         }
-        field(4; "Date"; DateTime)
+        field(4; "Date"; Date)
         {
             Caption = 'Date';
         }
         field(5; "User ID"; Code[50])
         {
             Caption = 'User ID';
-            tableRelation = User."User Name";
+            TableRelation = User."User Name";
         }
-        field(6; "Item No"; Code[20])
+        field(6; "NAVI Item No"; Code[20])
         {
             Caption = 'Item No';
             TableRelation = Item."No." WHERE("Chicken Eggs Item" = CONST(true));
@@ -34,7 +34,9 @@ table 51000 NAVI_ChickenEggsMaster
         field(7; Location; Code[20])
         {
             Caption = 'Location';
-            TableRelation = Location.Code;
+            //TableRelation = Location.Code;
+            fieldclass = flowfield;
+            CalcFormula = Lookup("Item"."NAVI Item Location" where("No." = field("NAVI Item No")));
         }
         field(8; Processed; Boolean)
         {
@@ -48,4 +50,12 @@ table 51000 NAVI_ChickenEggsMaster
             Clustered = true;
         }
     }
+    trigger OnInsert()
+    var
+        Lcdu_ChickenMngmNoSer: Codeunit NAVI_ChickenMngmNoSerCdu;
+    begin
+        Rec.No := Lcdu_ChickenMngmNoSer.GetNewSeriasNo();
+        Rec."User ID" := USERID();
+        Rec."Date" := WORKDATE();
+    end;
 }
