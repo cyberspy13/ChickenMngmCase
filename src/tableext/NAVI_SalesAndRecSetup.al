@@ -12,7 +12,6 @@ tableextension 51001 NAVI_SalesAndRecSetup extends "Sales & Receivables Setup"
         {
             Caption = 'Journal Batch Name';
             DataClassification = ToBeClassified;
-            TableRelation = "Item Journal Batch".Name;
         }
     }
 }

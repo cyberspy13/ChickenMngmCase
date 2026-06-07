@@ -34,7 +34,6 @@ table 51000 NAVI_ChickenEggsMaster
         field(7; Location; Code[20])
         {
             Caption = 'Location';
-            //TableRelation = Location.Code;
             fieldclass = flowfield;
             CalcFormula = Lookup("Item"."NAVI Item Location" where("No." = field("NAVI Item No")));
         }
