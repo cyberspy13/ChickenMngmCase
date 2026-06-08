@@ -3,6 +3,7 @@ codeunit 51000 NAVI_ChickenMngmCdu
     procedure CreateChickenEggsRecordInItemJournal(var ChickenEggsRecord: Record NAVI_ChickenEggsMaster)
     var
         ItemJournalLine: Record "Item Journal Line";
+        ItemJournalPage: Page "Item Journal";
         Lrec_SalesAndReceivablesSetup: Record "Sales & Receivables Setup";
         LineNo: Integer;
         test: page "Item Journal";
@@ -14,7 +15,7 @@ codeunit 51000 NAVI_ChickenMngmCdu
         end else begin
             ItemJournalLine.SetRange("Journal Template Name", 'ITEM');
             ItemJournalLine.SetRange("Journal Batch Name", Lrec_SalesAndReceivablesSetup."Journal Batch Name");
-            if ItemJOurnalLine.FindLast() then
+            if ItemJournalLine.FindLast() then
                 LineNo := ItemJournalLine."Line No."
             else
                 LineNo := 10000;
@@ -31,6 +32,7 @@ codeunit 51000 NAVI_ChickenMngmCdu
                     ItemJournalLine.Validate("Item No.", ChickenEggsRecord."NAVI Item No");
                     ItemJournalLine.Validate("Quantity", ChickenEggsRecord."Eggs Qty.");
                     ItemJournalLine.Validate("Location Code", ChickenEggsRecord.Location);
+                    ItemJournalLine.Validate("Chicken-Eggs Tracker No", ChickenEggsRecord.No);
                     ItemJournalLine.Insert(true);
                 until ChickenEggsRecord.Next() = 0;
             Message('Item Journal Line created successfully.');
