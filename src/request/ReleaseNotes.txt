@@ -1,0 +1,9 @@
+
+Pre-requisites:
+-search for the Sales & Receivables setup page and add values to the fields: Chicken Mangm and Journal Batch Name;
+-set a boolean button to the item idicating an Eggs.
+Lets imagine our Barn has installed Cameras to to count the eggs.So the data will be coming to the Business Central manually or via API
+The place where it is supposed to be going is table called - Chicken-Eggs Tracker
+Here we can add some values to the table such as location/item/date.user etc and then use action from the page.
+It is should create a new Item Journal record/s
+After posting the data is coming to the Item Ledger Entry page/table and set all records in the Chicke-Egg tracker table to TRUE
